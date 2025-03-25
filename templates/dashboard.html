@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Travio</div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('user.dashboard') }}">Home</a></li>
+            <li><a href="#explore">Explore</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Wish List</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1  id="hero-title"></h1>
+            <p id="hero-subtitle"></p>
+            <a href="/login" class="btn">Explore Destinations</a>
+        </div>
+    </section>
+
+    <section class="destination-heading" id="explore">
+        <h2>Explore Top Destinations</h2>
+        <p>Discover amazing places to visit and plan your next adventure.</p>
+      </section>
+  
+      <section class="card-container" id="image-gallery">
+        <!-- Cards will be inserted here dynamically -->
+      </section>
+  
+      <section class="about-us" id="about">
+        <h2>About Us</h2>
+        <p>
+          Welcome to Travio! We are passionate about helping travelers discover
+          breathtaking destinations, hidden gems, and unforgettable experiences.
+          Our mission is to inspire adventure and make travel planning seamless.
+        </p>
+      </section>
+  
+      <section class="contact-us" id="contact">
+        <h2>Contact Us</h2>
+        <p>Have any questions or need assistance? Reach out to us!</p>
+  
+        <form id="contact-form">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" rows="4" required></textarea>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </section>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Body Styling */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("../images/background.png") no-repeat;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Wrapper Styling */
+.wrapper {
+  width: 420px;
+  background: transparent;
+  color: rgba(3, 0, 0, 0.849);
+  border-radius: 10px;
+  padding: 30px 40px;
+  border: 2px solid rgba(12, 10, 10, 0.3);
+  backdrop-filter: blur(35px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper h1 {
+  text-align: center;
+  font-size: 36px;
+}
+
+/* Input Box Styling */
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(56, 7, 7, 0.2);
+  border-radius: 50px;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.8); /* Visible black text */
+  padding: 10px 20px; /* Proper padding for readability */
+  z-index: 1; /* Ensure input stays on top */
+}
+
+/* Ensure focus visibility */
+.input-box input:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Icon Styling */
+.input-box i {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 20px;
+  pointer-events: none; /* Prevent icons from blocking inputs */
+}
+
+/* Remember Me and Forgot Password Section */
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  color: #2e0505;
+  margin-top: 40px;
+}
+
+.remember-forgot input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+.remember-forgot a {
+  color: #0a1302;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+/* Button Styling */
+.button {
+  width: 100%;
+  padding: 12px 20px;
+  background-color: #007BFF;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 30px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
+
+.button:active {
+  background-color: #004080;
+  transform: scale(0.98);
+  transition: transform 0.1s ease;
+}
+
+/* Styling for the Register Section */
+.register-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #555;
+}
+
+.register-link p {
+  margin: 0;
+}
+
+.register-link a {
+  color: #007BFF;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.register-link a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Header Text Styling */
+.header-text {
+  text-align: center;
+  margin-bottom: -70px;
+  color: #333;
+}
+
+.header-text h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.header-text p {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+/* Logo Styling */
+.logo {
+  width: 350px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 400px) {
+  .button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}

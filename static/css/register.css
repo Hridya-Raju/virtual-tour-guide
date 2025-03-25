@@ -1,0 +1,178 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /* Body Styling */
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../images/background.png") no-repeat center center/cover;
+    min-height: 100vh;
+  }
+  
+  /* Wrapper Styling */
+  .wrapper {
+    width: 420px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border-radius: 10px;
+    padding: 30px 40px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Header Text Styling */
+  .header-text {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .header-text img {
+    width: 150px; /* Larger logo size */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 15px; /* Space between logo and heading */
+  }
+  
+  .header-text h2 {
+    font-size: 24px; /* Heading font size */
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px; /* Space below heading */
+  }
+  
+  .header-text p {
+    font-size: 14px; /* Subtext font size */
+    color: #666;
+  }
+  
+  /* Form Title */
+  .wrapper h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Input Box Styling */
+  .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+  }
+  
+  .input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    font-size: 16px;
+    color: #333;
+    padding: 0 20px;
+    outline: none;
+  }
+  
+  .input-box input:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  
+  .input-box i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #aaa;
+    font-size: 20px;
+    pointer-events: none;
+  }
+  
+  /* Remember Me and Forgot Password */
+  .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .remember-forgot input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .remember-forgot a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .remember-forgot a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Button Styling */
+  .button {
+    width: 100%;
+    padding: 12px 20px;
+    background-color: #007BFF;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  .button:active {
+    background-color: #004080;
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+  
+  /* Register Link Styling */
+  .register-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .register-link p {
+    margin: 0;
+  }
+  
+  .register-link a {
+    color: #007BFF;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .register-link a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 400px) {
+    .wrapper {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .header-text img {
+      width: 120px; /* Adjust logo size for smaller screens */
+    }
+  }
+  

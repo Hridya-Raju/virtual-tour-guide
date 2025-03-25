@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination Details | Travio</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/details.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Travio</div>
+        <ul class="nav-links">
+          <li><a href="{{ url_for('user.dashboard') }}">Home</a></li>
+          <li><a href="#explore">Explore</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+
+    <!-- Main Image -->
+    <div class="top-image-container">
+        <img id="main-image" src="" alt="Destination Image">
+    </div>
+
+    <div class="destination-box">
+        <section class="destination-container">
+            <!-- Left Section: Basic Details -->
+            <div class="left-section">
+                <h1 id="destination-title"></h1>
+                <p id="destination-description"></p>
+                <h3>📍 Location:</h3>
+                <p id="destination-location"></p>
+                <h3>🕰️ Best Time to Visit:</h3>
+                <p id="destination-time"></p>
+            </div>
+
+            <!-- Right Section: Wishlist Button & Extra Details -->
+            <div class="right-section">
+                <button class="wishlist-btn" onclick="addToWishlist()">❤️ Add to Wishlist</button>
+                
+                <div class="extra-details">
+                    <h3>🎯 Things to Do:</h3>
+                    <ul id="destination-activities"></ul>
+
+                    <h3>🏞 Nearby Attractions:</h3>
+                    <ul id="destination-attractions"></ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Map -->
+    <div id="map"></div>
+
+    <!--feedback popup-->
+    <div id="feedback-popup" class="popup-container">
+        <div class="popup-box">
+            <h2>📝 We Value Your Feedback!</h2>
+            <p>Tell us about your experience with this destination.</p>
+            <textarea id="popup-feedback-text" placeholder="Write your feedback here..." required></textarea>
+            <div class="popup-buttons">
+                <button id="submit-feedback" class="submit-btn">Submit</button>
+                <button id="close-popup" class="close-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="{{ url_for('static', filename='js/details.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/explore.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <!-- <img src="./images/logo.ico" alt="Travio"> -->
+             Travio
+        </div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('user.dashboard') }}">Home</a></li>
+            <li><a href="{{ url_for('user.explore') }}">Explore</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Wish List</a></li>
+        </ul>
+    </nav>
+
+    <!-- Explore Section with Image Slider -->
+    <section class="explore">
+        <div class="slider-container">
+            <div class="main-image">
+                <img id="current-image" src="{{ url_for('static', filename='images/anamudy-peak.jpg') }}" alt="Destination 1" width="600" height="400">
+                <div class="image-info">
+                    <h2 id="image-title">Anamudy Peak</h2>
+                    <p id="image-description">The highest peak in South India, offering stunning views and adventurous trekking trails.</p>
+                    <button id="read-more-btn">Read More</button>
+                </div>
+            </div>
+            <div class="preview-image">
+                <img id="next-image" src="{{ url_for('static', filename='./images/attukad.jpg') }}" alt="Destination 2" width="300" height="200">
+            </div>
+        </div>
+        <div class="nav-buttons">
+            <div class="arrow" id="prev">&#8592;</div> <!-- Left Arrow -->
+            <div class="arrow" id="next">&#8594;</div> <!-- Right Arrow -->
+        </div>
+        
+    </section>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+        </div>
+    </div>
+    <script>
+        const BASE_IMAGE_PATH = "{{ url_for('static', filename='images/') }}";
+    </script>
+    <script src="{{ url_for('static', filename='js/explore.js') }}" defer></script>
+</body>
+</html>
